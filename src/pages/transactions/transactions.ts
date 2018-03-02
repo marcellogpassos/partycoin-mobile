@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Tab, TabsComponent } from '../../components/tabs/tabs';
 
 /**
- * Generated class for the SendPage page.
+ * Generated class for the TransactionsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,18 +11,18 @@ import { Tab, TabsComponent } from '../../components/tabs/tabs';
 
 @IonicPage()
 @Component({
-  selector: 'page-send',
-  templateUrl: 'send.html',
+  selector: 'page-transactions',
+  templateUrl: 'transactions.html',
 })
-export class SendPage {
+export class TransactionsPage {
 
-  sendTab: Tab = TabsComponent.TABS[2];
+  transactionsTab: Tab = TabsComponent.TABS[3];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SendPage');
+    console.log('ionViewDidLoad TransactionsPage');
   }
 
 }

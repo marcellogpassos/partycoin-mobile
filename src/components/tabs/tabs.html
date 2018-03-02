@@ -1,0 +1,13 @@
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col *ngFor="let tab of tabs" class="tab" [ngClass]="{'active': tab == active}" button col-3 text-center>
+          <i button [class]="tab.icon" (click)="navigate(tab)"></i>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
