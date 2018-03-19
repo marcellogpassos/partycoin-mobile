@@ -16,6 +16,50 @@
 
 <ion-content padding>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <balance></balance>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list no-padding>
+
+    <ion-item class="received no-padding">
+      <ion-avatar item-start>
+        <i button class="fas fa-arrow-circle-down"></i>
+      </ion-avatar>
+      <h2>50 Tokens <span class="when">10/10/2010 10:10 PM</span></h2>
+      <p><strong>Recebido de:</strong> 0x5ab313ed410fa7d8983ee818f3fb2e584157004e</p>
+    </ion-item>
+
+    <ion-item class="sent no-padding">
+      <ion-avatar item-start>
+        <i button class="fas fa-arrow-circle-up"></i>
+      </ion-avatar>
+      <h2>20 Tokens <span class="when">10/10/2010 10:10 PM</span></h2>
+      <p><strong>Enviado para:</strong> 0x5ab313ed410fa7d8983ee818f3fb2e584157004e</p>
+    </ion-item>
+
+    <ion-item class="sent no-padding">
+      <ion-avatar item-start>
+        <i button class="fas fa-arrow-circle-up"></i>
+      </ion-avatar>
+      <h2>20 Tokens <span class="when">10/10/2010 10:10 PM</span></h2>
+      <p><strong>Enviado para:</strong> 0x5ab313ed410fa7d8983ee818f3fb2e584157004e</p>
+    </ion-item>
+
+    <ion-item class="received no-padding">
+      <ion-avatar item-start>
+        <i button class="fas fa-arrow-circle-down"></i>
+      </ion-avatar>
+      <h2>50 Tokens <span class="when">10/10/2010 10:10 PM</span></h2>
+      <p><strong>Recebido de:</strong> 0x5ab313ed410fa7d8983ee818f3fb2e584157004e</p>
+    </ion-item>
+
+  </ion-list>
+
 </ion-content>
 
 <tabs [active]="transactionsTab"></tabs>

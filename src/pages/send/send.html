@@ -24,7 +24,7 @@
     </ion-row>
   </ion-grid>
 
-  <ion-list>
+  <ion-list inset no-lines>
 
     <ion-item class="no-padding">
       <ion-label floating>Valor a ser enviado</ion-label>
@@ -41,11 +41,9 @@
         <i class="fas fa-qrcode"></i> Ler código QR da carteira de destino</p>
     </ion-item>
 
-    <ion-item class="no-padding block-button">
-      <button (click)="send()" ion-button block>Enviar Fundos</button>
-    </ion-item>
-  
   </ion-list>
+
+  <button (click)="send()" ion-button block>Enviar Fundos</button>
 
 </ion-content>
 

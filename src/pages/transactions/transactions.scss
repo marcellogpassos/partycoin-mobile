@@ -1,3 +1,39 @@
 page-transactions {
 
+    h2:first-child {
+        margin-top: auto !important;
+    }
+
+    h2 {
+        margin-bottom: 8px;
+    }
+
+    .when {
+        font-size: small;
+        color: #969696;
+        right: 0;
+        position: absolute;
+        padding: 4px 0;
+    }
+
+    .received i,
+    .sent i {
+        font-size: 18px;
+    }
+
+    .received i,
+    .received h2 {
+        color: #1b5e20;
+    }
+
+    .sent i,
+    .sent h2 {
+        color: #b71c1c;
+    }
+
+    ion-avatar {
+        min-width: 24px !important;
+        min-height: 24px !important;
+    }
+
 }
