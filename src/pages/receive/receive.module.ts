@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ReceivePage } from './receive';
 import { ComponentsModule } from '../../components/components.module';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { ComponentsModule } from '../../components/components.module';
   ],
   imports: [
     IonicPageModule.forChild(ReceivePage),
-    ComponentsModule
+    ComponentsModule,
+    NgxQRCodeModule,
   ],
 })
 export class ReceivePageModule {}

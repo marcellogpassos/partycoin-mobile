@@ -19,4 +19,8 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
   }
 
+  getBalance(): number {
+    return 120;
+  }
+
 }

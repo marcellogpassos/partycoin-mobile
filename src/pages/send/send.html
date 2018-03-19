@@ -16,6 +16,37 @@
 
 <ion-content padding>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <balance></balance>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+
+    <ion-item class="no-padding">
+      <ion-label floating>Valor a ser enviado</ion-label>
+      <ion-input type="number" [(ngModel)]="amount"></ion-input>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-label floating>Endereço da carteira de destino</ion-label>
+      <ion-input type="text" [(ngModel)]="dstAddress"></ion-input>
+    </ion-item>
+
+    <ion-item class="clipboard no-padding">
+      <p (click)="scanQRCode()">
+        <i class="fas fa-qrcode"></i> Ler código QR da carteira de destino</p>
+    </ion-item>
+
+    <ion-item class="no-padding block-button">
+      <button (click)="send()" ion-button block>Enviar Fundos</button>
+    </ion-item>
+  
+  </ion-list>
+
 </ion-content>
 
 <tabs [active]="sendTab"></tabs>

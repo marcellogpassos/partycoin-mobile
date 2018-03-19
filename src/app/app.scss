@@ -15,6 +15,16 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+.user-name {
+    // text-transform: uppercase;
+    color: #212121;
+    font-size: 1.8rem;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -40,4 +50,17 @@
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
                 0 1px 5px 0 rgba(0,0,0,0.12),
                 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+.clipboard .item-inner {
+    border: 0 !important;
+}
+
+.clipboard p {
+    cursor: pointer;
+    color: color($colors, dark) !important;
+}
+
+.transparentBody {
+    background: transparent !important;
 }

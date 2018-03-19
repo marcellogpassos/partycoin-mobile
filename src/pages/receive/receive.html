@@ -16,6 +16,22 @@
 
 <ion-content padding>
 
+  <ion-list>
+
+    <ion-item class="no-padding">
+      <ion-label floating>Endereço da sua carteira</ion-label>
+      <ion-input type="text" [(ngModel)]="walletAddress" readonly></ion-input>
+    </ion-item>
+
+    <ion-item class="clipboard no-padding">
+      <p (click)="copyWalletAddress()">
+        <i class="fas fa-copy"></i> Copiar para área de transferência</p>
+    </ion-item>
+      
+  </ion-list>
+
+  <ngx-qrcode class="qr-code" [qrc-element-type]="url" [qrc-value]="walletAddress" qrc-version = "3" qrc-errorCorrectionLevel = "L"></ngx-qrcode>
+
 </ion-content>
 
 <tabs [active]="receiveTab"></tabs>
