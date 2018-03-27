@@ -1,3 +1,16 @@
 page-login {
 
+    ion-content {
+        background-color: #dcedc8 !important;
+        background-image: url("../../assets/imgs/bkg.png");
+    }
+
+    ion-item {
+        background-color: transparent !important;
+    }
+
+    ion-label {
+        color: #212121 !important;
+    }
+
 }
