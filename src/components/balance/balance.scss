@@ -1,12 +1,21 @@
 balance {
 
+    .balance {
+        padding: 32px 16px 16px 16px;
+        border: 4px #1b5e20 solid;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
     .balance .label {
         font-size: 12px;
-        color: #646464;
+        color: #4caf50;
     }
 
     .balance .value {
-        color: #212121;
+        color: #1b5e20;
         font-size: 2rem;
         font-weight: bold;
     }

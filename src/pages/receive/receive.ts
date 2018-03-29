@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { TabsComponent, Tab } from '../../components/tabs/tabs';
 import { Clipboard } from '@ionic-native/clipboard';
+import { MainWalletProvider } from '../../providers/main-wallet/main-wallet';
 
 /**
  * Generated class for the ReceivePage page.
@@ -19,7 +20,7 @@ export class ReceivePage {
 
   receiveTab: Tab = TabsComponent.TABS[1];
 
-  walletAddress: string = "0x5ab313ed410fa7d8983ee818f3fb2e584157004e";
+  walletAddress: string;
 
   elementType : 'url' | 'canvas' | 'img' = 'url';
 
@@ -27,7 +28,11 @@ export class ReceivePage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public clipboard: Clipboard,
-    public toastCtrl: ToastController) {
+    public toastCtrl: ToastController,
+    protected mainWalletProvider: MainWalletProvider) {
+    mainWalletProvider.getMainWallet().then(hash => {
+      this.walletAddress = hash;
+    });
   }
 
   ionViewDidLoad() {

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
 import { PartycoinProvider } from '../../providers/partycoin/partycoin';
 import { Credentials } from '../../model/credentials';
 import { HttpResponse } from '@angular/common/http';
+import { AuthProvider } from '../../providers/auth/auth';
 
 /**
  * Generated class for the LoginPage page.
@@ -26,7 +26,7 @@ export class LoginPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public partycoinProvider: PartycoinProvider,
-    private storage: Storage) {
+    private auth: AuthProvider) {
       this.credentials = new Credentials();
   }
 
@@ -41,8 +41,8 @@ export class LoginPage {
   login() {
     this.partycoinProvider.login(this.credentials)
       .subscribe((response: HttpResponse<any>) => {
-        let authToken = response.headers.get("Authorization")
-        this.storage.set("authToken", authToken).then(() => {
+        let authToken = response.headers.get("Authorization");
+        this.auth.login(authToken).then(() => {
           this.navCtrl.setRoot("HomePage");
         });        
       }, error => {

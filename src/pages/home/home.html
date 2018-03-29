@@ -9,18 +9,19 @@
 
 <ion-content padding>
 
-  <div class="prelude"></div>
+  <div class=""></div>
 
   <ion-grid>
     <ion-row>
       <ion-col col-12 text-center>
-        <div class="card avatar" style="background-image: url(https://goo.gl/Q7Xis6)"></div>
-        <p class="user-name">Marcello Passos</p>
+        <p class="user-name">{{user?.nome}}</p>
+        <div class="card avatar" style="background-image: url(assets/imgs/avatar.png)"></div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-12>
-        <balance></balance>
+        <br><br>
+        <balance [authToken]="authToken" [wallet]="mainWallet?.hash"></balance>
       </ion-col>
     </ion-row>
   </ion-grid>

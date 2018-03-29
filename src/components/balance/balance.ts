@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PartycoinProvider } from '../../providers/partycoin/partycoin';
 
 /**
  * Generated class for the BalanceComponent component.
@@ -12,15 +13,41 @@ import { Component } from '@angular/core';
 })
 export class BalanceComponent {
 
-  text: string;
+  private _wallet: string;
+  private _authToken: any;
 
-  constructor() {
+  balance: number;
+  
+  constructor(private partycoin: PartycoinProvider) {
     console.log('Hello BalanceComponent Component');
-    this.text = 'Hello World';
   }
 
-  getBalance(): number {
-    return 120;
+  @Input()
+  set wallet(wallet: string) {
+    this._wallet = wallet;
+    this.updateBalance();
+  }
+
+  get wallet() {
+    return this._wallet;
+  }
+
+  @Input()
+  set authToken(authToken: any) {
+    this._authToken = authToken;
+    this.updateBalance();
+  }
+
+  get authToken() {
+    return this._authToken;
+  }
+
+  updateBalance() {
+    if (this._wallet && this._authToken)
+      this.partycoin.getBalance(this.wallet, this.authToken)
+        .subscribe((response: any) => {
+          this.balance = response.balance
+        });
   }
 
 }

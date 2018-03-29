@@ -16,14 +16,6 @@
 
 <ion-content padding>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col col-12>
-        <balance></balance>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
   <ion-list inset no-lines>
 
     <ion-item class="no-padding">
@@ -38,7 +30,7 @@
       
   </ion-list>
 
-  <ngx-qrcode class="qr-code" [qrc-element-type]="url" [qrc-value]="walletAddress" qrc-version = "3" qrc-errorCorrectionLevel = "L"></ngx-qrcode>
+  <ngx-qrcode *ngIf="walletAddress" class="qr-code" [qrc-element-type]="url" [qrc-value]="walletAddress" qrc-version = "3" qrc-errorCorrectionLevel = "L"></ngx-qrcode>
 
 </ion-content>
 
